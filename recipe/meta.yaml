@@ -1,5 +1,5 @@
 {% set name = "async_retriever" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: 91e6b7f82a900fbff1433b7b89c1e7494e1c20bc3e1d9a0bb431b4e8e3aacdf0
+  sha256: 5d7314cf64a018f896741d03890f53d22bd3b1b844b2ecb59ccca3cc53005d93
 
 build:
   number: 0
@@ -22,11 +22,12 @@ requirements:
     - setuptools-scm
   run:
     - aiohttp
+    - aiohttp-client-cache
+    - aiosqlite
     - cytoolz
     - nest-asyncio
     - orjson
     - python >=3.7
-    - setuptools
 
 test:
   imports:
@@ -38,7 +39,7 @@ test:
 
 about:
   home: https://github.com/cheginit/async_retriever
-  summary: High-level API for asyncronous send/recieve requests with caching.
+  summary: High-level API for asynchronous requests with persistent caching.
   license: MIT
   license_file: LICENSE
 
