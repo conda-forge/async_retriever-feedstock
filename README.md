@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/async_retriever-feedstock/blob/master/LICENSE.txt)
 
-Summary: High-level API for asyncronous send/recieve requests with caching.
+Summary: High-level API for asynchronous requests with persistent caching.
 
 Current build status
 ====================
