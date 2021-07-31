@@ -1,5 +1,5 @@
 {% set name = "async_retriever" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: 5d7314cf64a018f896741d03890f53d22bd3b1b844b2ecb59ccca3cc53005d93
+  sha256: 3d5a01f078d1e979ef5e45b6c3cef57a8dc095c1b4d9fcd45cdd11671a074877
 
 build:
   number: 0
@@ -21,9 +21,12 @@ requirements:
     - python >=3.7
     - setuptools-scm
   run:
+    - aiodns
     - aiohttp
     - aiohttp-client-cache
     - aiosqlite
+    - brotlipy
+    - cchardet
     - cytoolz
     - nest-asyncio
     - orjson
