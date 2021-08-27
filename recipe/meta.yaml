@@ -1,5 +1,5 @@
 {% set name = "async_retriever" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: acfc1e70a2b9c933ae2f870e0fb403835ddd791df357e5927d2e735a3972d011
+  sha256: 57c89c3af27458fd2a24d2cb0254a63075287c47ce1335f3bb2e32a619fea8ba
 
 build:
   number: 0
@@ -29,8 +29,8 @@ requirements:
     - cchardet
     - cytoolz
     - nest-asyncio
-    - orjson
     - python >=3.7
+    - ujson
 
 test:
   imports:
