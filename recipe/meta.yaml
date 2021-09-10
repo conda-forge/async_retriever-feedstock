@@ -1,5 +1,5 @@
 {% set name = "async_retriever" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: 57c89c3af27458fd2a24d2cb0254a63075287c47ce1335f3bb2e32a619fea8ba
+  sha256: b3b8c1dc565a3a647bb2c5311d714faf5643bd70ff6b974dc924866c1cb856ae
 
 build:
   number: 0
