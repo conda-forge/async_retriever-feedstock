@@ -28,6 +28,7 @@ requirements:
     - brotlipy
     - cchardet
     - cytoolz
+    - importlib_metadata
     - nest-asyncio
     - python >=3.7
     - ujson
