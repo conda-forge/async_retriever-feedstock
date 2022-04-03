@@ -1,5 +1,5 @@
 {% set name = "async_retriever" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: 992a367c536439f9768f7ba783a971e94e228f277e36251fc19043b56a290be4
+  sha256: 9adf8ebf85e282edfddc5c42b3a40be74511951dcaafa485bb1edee6d4630418
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   run:
     - aiodns
     - aiohttp
-    - aiohttp-client-cache >=0.5.1
+    - aiohttp-client-cache >=0.6.1
     - aiosqlite
     - brotlipy
     - cchardet
