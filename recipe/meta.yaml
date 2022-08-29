@@ -1,5 +1,5 @@
 {% set name = "async_retriever" %}
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,29 +7,30 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: 472667534fbd295867b76cf762412bf97702f0ec19a857326fabac86fc98cb66
+  sha256: a511ebb6609a19cc111bd9bb87de3f3aa4a3ada998845dc7c74261e0db8454a8
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - pip
     - python >=3.8
+    - pip
     - setuptools-scm
   run:
+    - python >=3.8
     - aiodns
-    - aiohttp >=3.8.1
-    - aiohttp-client-cache >=0.7.3
     - aiosqlite
+    - aiohttp >=3.8.1
     - brotli
     - cchardet
     - cytoolz
     - nest-asyncio
-    - python >=3.8
+    - aiohttp-client-cache >=0.7.3
     - ujson
+    - cytoolz
 
 test:
   imports:
@@ -40,7 +41,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/hyriver/async_retriever
+  home: https://github.com/hyriver/async-retriever
   summary: High-level API for asynchronous requests with persistent caching.
   license: MIT
   license_file:

@@ -1,7 +1,7 @@
 About async_retriever
 =====================
 
-Home: https://github.com/hyriver/async_retriever
+Home: https://github.com/hyriver/async-retriever
 
 Package license: MIT
 
