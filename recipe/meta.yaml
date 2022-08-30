@@ -47,6 +47,10 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python >=3.8
+        - pip
+        - setuptools-scm
       run:
         - {{ pin_subpackage('async-retriever', max_pin="x.x.x") }}
     test:
