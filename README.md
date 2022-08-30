@@ -1,4 +1,4 @@
-About async_retriever
+About async-retriever
 =====================
 
 Home: https://github.com/hyriver/async-retriever
@@ -27,53 +27,54 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-async--retriever-green.svg)](https://anaconda.org/conda-forge/async-retriever) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/async-retriever.svg)](https://anaconda.org/conda-forge/async-retriever) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/async-retriever.svg)](https://anaconda.org/conda-forge/async-retriever) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/async-retriever.svg)](https://anaconda.org/conda-forge/async-retriever) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-async_retriever-green.svg)](https://anaconda.org/conda-forge/async_retriever) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/async_retriever.svg)](https://anaconda.org/conda-forge/async_retriever) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/async_retriever.svg)](https://anaconda.org/conda-forge/async_retriever) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/async_retriever.svg)](https://anaconda.org/conda-forge/async_retriever) |
 
-Installing async_retriever
+Installing async-retriever
 ==========================
 
-Installing `async_retriever` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `async-retriever` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `async_retriever` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `async-retriever, async_retriever` can be installed with `conda`:
 
 ```
-conda install async_retriever
-```
-
-or with `mamba`:
-
-```
-mamba install async_retriever
-```
-
-It is possible to list all of the versions of `async_retriever` available on your platform with `conda`:
-
-```
-conda search async_retriever --channel conda-forge
+conda install async-retriever async_retriever
 ```
 
 or with `mamba`:
 
 ```
-mamba search async_retriever --channel conda-forge
+mamba install async-retriever async_retriever
+```
+
+It is possible to list all of the versions of `async-retriever` available on your platform with `conda`:
+
+```
+conda search async-retriever --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search async-retriever --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search async_retriever --channel conda-forge
+mamba repoquery search async-retriever --channel conda-forge
 
-# List packages depending on `async_retriever`:
-mamba repoquery whoneeds async_retriever --channel conda-forge
+# List packages depending on `async-retriever`:
+mamba repoquery whoneeds async-retriever --channel conda-forge
 
-# List dependencies of `async_retriever`:
-mamba repoquery depends async_retriever --channel conda-forge
+# List dependencies of `async-retriever`:
+mamba repoquery depends async-retriever --channel conda-forge
 ```
 
 
@@ -118,17 +119,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating async_retriever-feedstock
+Updating async-retriever-feedstock
 ==================================
 
-If you would like to improve the async_retriever recipe or build a new
+If you would like to improve the async-retriever recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/async_retriever-feedstock are
+Note that all branches in the conda-forge/async-retriever-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
