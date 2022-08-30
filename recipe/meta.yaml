@@ -1,4 +1,4 @@
-{% set name = "async_retriever" %}
+{% set name = "async-retriever" %}
 {% set version = "0.3.5" %}
 
 package:
@@ -11,34 +11,44 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
-requirements:
-  host:
-    - python >=3.8
-    - pip
-    - setuptools-scm
-  run:
-    - python >=3.8
-    - aiodns
-    - aiosqlite
-    - aiohttp >=3.8.1
-    - brotli
-    - cchardet
-    - cytoolz
-    - nest-asyncio
-    - aiohttp-client-cache >=0.7.3
-    - ujson
-    - cytoolz
+outputs:
+  - name: {{ name }}
+    script: {{ PYTHON }} -m pip install . -vv
+    requirements:
+      host:
+        - python >=3.8
+        - pip
+        - setuptools-scm
+      run:
+        - python >=3.8
+        - aiodns
+        - aiosqlite
+        - aiohttp >=3.8.1
+        - brotli
+        - cchardet
+        - cytoolz
+        - nest-asyncio
+        - aiohttp-client-cache >=0.7.3
+        - ujson
+        - cytoolz
 
-test:
-  imports:
-    - async_retriever
-  commands:
-    - pip check
-  requires:
-    - pip
+    test:
+      imports:
+        - async_retriever
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: async_retriever
+    requirements:
+      run:
+        - {{ pin_subpackage('async-retriever', max_pin="x.x.x") }}
+    test:
+      imports:
+        - async_retriever
 
 about:
   home: https://github.com/hyriver/async-retriever
