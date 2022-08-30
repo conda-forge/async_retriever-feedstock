@@ -14,10 +14,10 @@ build:
 
 outputs:
   - name: {{ name }}
-    build:
-      noarch: python
-      script: python -m pip install . -vv
     requirements:
+      build:
+        noarch: python
+        script: {{ PYTHON }} -m pip install . -vv
       host:
         - python >=3.8
         - pip
@@ -44,13 +44,9 @@ outputs:
         - pip
 
   - name: async_retriever
-    build:
-      noarch: python
     requirements:
-      host:
-        - python >=3.8
-        - pip
-        - setuptools-scm
+      build:
+        noarch: python
       run:
         - {{ pin_subpackage('async-retriever', max_pin="x.x.x") }}
     test:
