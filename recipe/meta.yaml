@@ -14,10 +14,10 @@ build:
 
 outputs:
   - name: {{ name }}
-    script: {{ PYTHON }} -m pip install . -vv
+    build:
+      noarch: python
+    script: build_base.sh
     requirements:
-      build:
-        noarch: python
       host:
         - python >=3.8
         - pip
