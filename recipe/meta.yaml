@@ -10,12 +10,13 @@ source:
   sha256: a511ebb6609a19cc111bd9bb87de3f3aa4a3ada998845dc7c74261e0db8454a8
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
 outputs:
   - name: {{ name }}
+    build:
+      noarch: python
+      script: python -m pip install . -vv
     requirements:
       host:
         - python >=3.8
@@ -43,6 +44,8 @@ outputs:
         - pip
 
   - name: async_retriever
+    build:
+      noarch: python
     requirements:
       run:
         - {{ pin_subpackage('async-retriever', max_pin="x.x.x") }}
