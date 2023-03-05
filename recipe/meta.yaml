@@ -1,13 +1,13 @@
 {% set name = "async-retriever" %}
-{% set version = "0.3.12" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/async_retriever-{{ version }}.tar.gz
-  sha256: 319d63f05c1b077f6c10ab1e1f890d43579098cce85edfcea556c3280b9c68c7
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 129abfa261f2b66d17fc8604c45326a8575a0c3ae901d0af59ce9b8627fb43cd
 
 build:
   number: 0
@@ -20,15 +20,15 @@ outputs:
     requirements:
       host:
         - python >=3.8
+        - setuptools >=42
+        - setuptools-scm >=7
         - pip
-        - setuptools-scm
       run:
         - python >=3.8
+        - aiohttp-client-cache >=0.8.1
         - cytoolz
         - nest-asyncio
-        - aiohttp-client-cache >=0.8.1
         - ujson
-        - cytoolz
 
     test:
       imports:
@@ -43,7 +43,7 @@ outputs:
       noarch: python
     requirements:
       run:
-        - {{ pin_subpackage('async-retriever', max_pin="x.x.x") }}
+        - {{ pin_subpackage(name, exact=True) }}
     test:
       imports:
         - async_retriever
