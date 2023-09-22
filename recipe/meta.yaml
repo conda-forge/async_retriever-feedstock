@@ -25,7 +25,9 @@ outputs:
         - pip
       run:
         - python >=3.8
+        - aiodns
         - aiohttp-client-cache >=0.8.1
+        - brotli
         - cytoolz
         - nest-asyncio
         - ujson
