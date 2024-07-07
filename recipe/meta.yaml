@@ -1,5 +1,5 @@
 {% set name = "async-retriever" %}
-{% set version = "0.16.1" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 15f7f1a1479dde2d322a5f5bc784791f86bbc91134c0ca2011d1992f5daee00e
+  sha256: 2797927a9ff5e2b890bb54193693ec9f7c937850a9fb7e5a07359b34f3cb3b8e
 
 build:
   number: 0
@@ -20,8 +20,8 @@ outputs:
     requirements:
       host:
         - python >=3.8
-        - setuptools >=42
-        - setuptools-scm >=7
+        - hatchling
+        - hatch-vcs
         - pip
       run:
         - python >=3.8
