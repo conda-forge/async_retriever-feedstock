@@ -1,5 +1,5 @@
 {% set name = "async-retriever" %}
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2797927a9ff5e2b890bb54193693ec9f7c937850a9fb7e5a07359b34f3cb3b8e
+  sha256: b69183239ee62fa74d6388950292e08c4a554c631a689b6087932a88f28d8732
 
 build:
   number: 0
@@ -19,12 +19,12 @@ outputs:
     script: build_base.sh
     requirements:
       host:
-        - python >=3.8
+        - python >=3.9
         - hatchling
         - hatch-vcs
         - pip
       run:
-        - python >=3.8
+        - python >=3.9
         - aiodns
         - aiohttp-client-cache >=0.8.1
         - brotli
