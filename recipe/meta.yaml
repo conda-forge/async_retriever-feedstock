@@ -1,5 +1,5 @@
 {% set name = "async-retriever" %}
-{% set version = "0.17.1" %}
+{% set version = "0.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b69183239ee62fa74d6388950292e08c4a554c631a689b6087932a88f28d8732
+  sha256: 864cb66164712b67907e7e2b2f585ecfa2286db6be305e7fba12ae74f77d0084
 
 build:
   number: 0
@@ -26,7 +26,7 @@ outputs:
       run:
         - python >=3.9
         - aiodns
-        - aiohttp-client-cache >=0.8.1
+        - aiohttp-client-cache >=0.12.3
         - brotli
         - cytoolz
         - nest-asyncio
