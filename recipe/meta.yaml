@@ -25,6 +25,7 @@ outputs:
         - pip
       run:
         - python >={{ python_min }}
+        - aiofiles
         - aiodns
         - aiohttp-client-cache >=0.12.3
         - brotli
