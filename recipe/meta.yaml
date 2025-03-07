@@ -30,8 +30,7 @@ outputs:
         - aiohttp-client-cache >=0.12.3
         - brotli
         - cytoolz
-        - nest-asyncio
-        - ujson
+        - orjson
 
     test:
       imports:
